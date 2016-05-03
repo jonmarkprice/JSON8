@@ -7,12 +7,13 @@
     "es6",
     "es2015",
     "map",
-    "set"
+    "set",
+    "stringify",
+    "parse"
   ],
   "homepage": "https://github.com/JSON8/JSON8",
   "repository": "github:JSON8/JSON8",
   "bugs": "https://github.com/JSON8/JSON8/issues",
-  "main": "index.js",
   "scripts": {
     "preversion": "npm test",
     "prepublish": "npm run bundle",
