@@ -1,5 +1,6 @@
 import assert from 'assert'
 import {serialize} from '..'
+import string from '../lib/walker'
 
 const valid = [
   ['true', true],
@@ -51,6 +52,7 @@ describe('serialize', () => {
         if (!(v instanceof Map) && !(v instanceof Set)) {
           assert.strictEqual(serialize(v), JSON.stringify(v))
           assert.strictEqual(serialize(v, {space: 2}), JSON.stringify(v, null, 2))
+          assert.strictEqual(string(v), JSON.stringify(v, null, 2))
           assert.strictEqual(serialize(v, {space: '    '}), JSON.stringify(v, null, '    '))
         }
       })
